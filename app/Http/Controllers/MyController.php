@@ -102,6 +102,8 @@ class MyController extends Controller
     $siswa = session('siswa_data', $this->arr);
     $index = array_search($id, array_column($siswa, 'id'));
 
+    array_splice($siswa, $index, 1);
+
     session(['siswa_data' => $siswa]);
 
     return redirect('siswa');

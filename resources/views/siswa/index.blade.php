@@ -24,7 +24,7 @@
           <td>{{$data['nama']}}</td>
           <td>{{$data['kelas']}}</td>
           <td>
-            <form action="/siswa{{ $data['id'] }}" method="post">
+            <form action="/siswa/{{ $data['id'] }}" method="post">
             <a href="/siswa/{{ $data['id'] }}">Show</a> |
             <a href="/siswa/{{ $data['id'] }}/edit">Edit</a>
           @csrf
