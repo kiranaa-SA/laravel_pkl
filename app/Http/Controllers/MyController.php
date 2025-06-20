@@ -21,7 +21,7 @@ class MyController extends Controller
     public function show ($id)
      {
         // cari data siswa dari session
-        $data = session ('siswa.show', $this->arr);
+        $data = session ('siswa_data', $this->arr);
         
         // cari berdasarkan id
         $siswa = collect($data)->firstWhere('id',$id);
